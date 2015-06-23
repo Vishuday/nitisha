@@ -1,5 +1,13 @@
 # Jarvis
 
+WARNING: Work in progress
+---
+The model diagram below highlights the general state of what models are included. However many of them have the bare minimum functionality. You can see the `docs/models_complete.svg` image for a more complete picture of what is included. Most models have only enough information on them to make them all link up so very little data beyond absolute basics are included at this time. Please feel free to add to the models and send pull requests.
+
+At the time of writing all the models in the diagram below have working endpoints on the REST API at least.
+
+# About
+
 Jarvis is a fairly simple REST API inventorying system.
 
 It was inspired by Netdot but does not implement the same quantity of
@@ -81,7 +89,8 @@ This should start the API on http://localhost:3000 assuming everything has worke
     },
   "location":null
   }
-]}```
+]}
+```
 
 # Author
 
