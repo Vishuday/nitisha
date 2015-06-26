@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rj45:
+  id: 1
+  name: RJ45
+
+rj11:
+  id: 2
+  name: RJ11
+
+sfp:
+  id: 3
+  name: SFP
+
+sfpplus:
+  id: 4
+  name: SFP+
+
+csfp:
+  id: 5
+  name: Compact SFP
+
+rs232:
+  id: 6
+  name: RS232

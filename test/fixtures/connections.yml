@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+mptocore1:
+  porta: microport1
+  portb: swcorep1
+  cabletype: cat6
+  inverse: core1tomp
+mptocore2:
+  porta: microport2
+  portb: swcorep2
+  cabletype: cat6
+  inverse: core2tomp
+core1tomp:
+  porta: swcorep1
+  portb: microport1
+  cabletype: cat6
+  inverse: mptocore1
+core2tomp:
+  porta: swcorep2
+  portb: microport2
+  cabletype: cat6
+  inverse: mptocore2

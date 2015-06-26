@@ -1,0 +1,163 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+deskport1:
+  name: Local Area Connection 1
+  device: paultdesk
+  porttype: 1000fdx
+
+deskport2:
+  name: Local Area Connection 2
+  device: paultdesk
+  porttype: 1000fdx
+
+microport1:
+  name: p1p1
+  device: microserver
+  porttype: 1000fdx
+
+microport2:
+  name: p1p2
+  device: microserver
+  porttype: 1000fdx
+
+microport3:
+  name: eth0
+  device: microserver
+
+laptopport1:
+  name: en0
+  device: paulsmacbook
+
+hetznerport1:
+  name: eth0
+  device: vega
+
+swcorep1:
+  name: SW Core Port 1
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep2:
+  name: SW Core Port 2
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep3:
+  name: Port 3
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep4:
+  name: Port 4
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep5:
+  name: Port 5
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep6:
+  name: Port 6
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep7:
+  name: Port 7
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep8:
+  name: Port 8
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep9:
+  name: Port 9
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep10:
+  name: Port 10
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep11:
+  name: Port 11
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep12:
+  name: Port 12
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep13:
+  name: Port 13
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep14:
+  name: Port 14
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep15:
+  name: Port 15
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep16:
+  name: Port 16
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep17:
+  name: Port 17
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep18:
+  name: Port 18
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep19:
+  name: Port 19
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep20:
+  name: Port 20
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep21:
+  name: Port 21
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep22:
+  name: Port 22
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep23:
+  name: Port 23
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep24:
+  name: Port 24
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep25:
+  name: Port 25
+  device: hp1810-24g
+  porttype: 1001000
+
+swcorep26:
+  name: Port 26
+  device: hp1810-24g
+  porttype: 1001000

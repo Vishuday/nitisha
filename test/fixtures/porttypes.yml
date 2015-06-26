@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+10hdx:
+  name: Copper 10HDx
+  connectortype: rj45
+
+10fdx:
+  name: Copper 10FDx
+  connectortype: rj45
+
+100hdx:
+  name: Copper 100HDx
+  connectortype: rj45
+
+100fdx:
+  name: Copper 100FDx
+  connectortype: rj45
+
+1000fdx:
+  name: Copper 1000FDx
+  connectortype: rj45
+
+10000fdx:
+  name: Copper 10000FDx
+  connectortype: rj45
+
+10100:
+  name: Copper 10/100 autosense
+  connectortype: rj45
+
+1001000:
+  name: Copper 100/1000 autosense
+  connectortype: rj45
+
+tel:
+  name: Telephony
+  connectortype: rj11

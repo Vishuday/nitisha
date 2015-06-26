@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+microserverinterface:
+  address: 192.168.52.250
+  parent_id: 5
+  virtualinterface: microbond0

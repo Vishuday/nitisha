@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Rapidoc</title>
+    <meta name="description" content="Artículo en GenbetaDev sobre Bootstrap 2.0">
+    <meta name="author" content="Rafael Jurado González" >
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/rapidoc.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="assets/js/jquery-1.9.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <style>
+      body { padding-top: 60px; }
+    </style>
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Jarvis</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Resources</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Resources</h1>
+      </div>
+      <div class="accordion" id="accordion2">
+
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseassets">
+              <strong>assets</strong>
+            </a>
+          </div>
+          <div id="collapseassets" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents an asset in the system</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/assets(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/assets(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/assets/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/assets/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/assets/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/assets/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/assets/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsecables">
+              <strong>cables</strong>
+            </a>
+          </div>
+          <div id="collapsecables" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a cable of a Cabletype e.g. 1m CAT6 cable</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cables(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/cables(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cables/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cables/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cables/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/cables/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/cables/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsecabletypes">
+              <strong>cabletypes</strong>
+            </a>
+          </div>
+          <div id="collapsecabletypes" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a type cable e.g. a CAT6 network cable</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/cabletypes/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseconnectors">
+              <strong>connectors</strong>
+            </a>
+          </div>
+          <div id="collapseconnectors" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p></p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/connectors/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsedevices">
+              <strong>devices</strong>
+            </a>
+          </div>
+          <div id="collapsedevices" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a device in the system e.g. a cisco switch</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devices(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/devices(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devices/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devices/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devices/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/devices/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/devices/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsedevicetypes">
+              <strong>devicetypes</strong>
+            </a>
+          </div>
+          <div id="collapsedevicetypes" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a type of device e.g. server or switch</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/devicetypes/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseinterfaces">
+              <strong>interfaces</strong>
+            </a>
+          </div>
+          <div id="collapseinterfaces" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a logical interface e.g. eth0 on a server</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/interfaces/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapselocations">
+              <strong>locations</strong>
+            </a>
+          </div>
+          <div id="collapselocations" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a physical location (can be nested)</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/locations(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/locations(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/locations/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/locations/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/locations/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/locations/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/locations/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseports">
+              <strong>ports</strong>
+            </a>
+          </div>
+          <div id="collapseports" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a physical port on a device</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/ports(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/ports(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/ports/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/ports/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/ports/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/ports/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/ports/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseporttypes">
+              <strong>porttypes</strong>
+            </a>
+          </div>
+          <div id="collapseporttypes" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <div class="pad-description">
+                  <p>Represents a type of port e.g. 1000FDx Copper Network Port</p>
+              </div>
+              <table class="table table-hover">
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-success">
+                      POST</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes/new(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes/:id/edit(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-info">
+                      GET</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label">
+                      PATCH</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes/:id(.:format)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="routes"><span class="label label-important">
+                      DELETE</span>
+                    </td>
+                    <td>
+                        /api/v1/porttypes/:id(.:format)
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <footer>
+        <p>Paul Thomas 2015</p>
+      </footer>
+
+      <script>
+        window.onload = function () { 
+          var collapse = '#' + decodeURI( (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1] );
+          $(collapse).collapse('show')
+        }
+      </script>
+    </div>
+  </body>
+</html>

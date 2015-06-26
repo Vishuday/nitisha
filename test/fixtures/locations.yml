@@ -1,0 +1,19 @@
+--- !omap
+
+brs:
+  id: 1
+  name: Bristol
+
+myhouse:
+  id: 2
+  name: My House
+  parent_id: 1
+
+hetzner:
+  id: 3
+  name: Hetzner
+
+commscloset:
+  id: 4
+  name: My Comms Closet
+  parent_id: 2

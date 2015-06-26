@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+10net:
+  id: 1
+  name: "10.0.0.0/8"
+  description: "RFC1918 test range"
+  address: "10.0.0.0"
+  prefix: 8
+
+10000:
+  id: 2
+  name: "10.0.0.0/24"
+  description: "RFC1918 test subnet"
+  address: "10.0.0.0"
+  prefix: 24
+  parent_id: 1
+
+10100:
+  id: 3
+  name: "10.1.0.0/24"
+  description: "RFC1981 test subnet 2"
+  address: "10.1.0.0"
+  prefix: 24
+  parent_id: 1
+
+19216800:
+  id: 4
+  name: "192.168.0.0/24"
+  description: "RFC1918 test range 2"
+  address: "192.168.0.0"
+  prefix: 24
+
+home:
+  id: 5
+  name: "RFC1918 space at Kingston Drive"
+  name: 192.168.52.0
+  prefix: 24

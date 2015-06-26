@@ -1,0 +1,128 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+local1:
+  name: Local Area Connection 1
+  port: deskport1
+
+local2:
+  name: Local Area Connection 2
+  port: deskport2
+
+p1p1:
+  name: p1p1
+  port: microport1
+
+p1p2:
+  name: p1p2
+  port: microport2
+
+eth0:
+  name: eth0
+  port: hetznerport1
+
+en0:
+  name: en0
+  port: laptopport1
+
+swcoreif1:
+  name: Interface 1
+  port: swcorep1
+
+swcoreif2:
+  name: Interface 2
+  port: swcorep2
+
+swcoreif3:
+  name: Interface 3
+  port: swcorep3
+
+swcoreif4:
+  name: Interface 4
+  port: swcorep4
+
+swcoreif5:
+  name: Interface 5
+  port: swcorep5
+
+swcoreif6:
+  name: Interface 6
+  port: swcorep6
+
+swcoreif7:
+  name: Interface 7
+  port: swcorep7
+
+swcoreif8:
+  name: Interface 8
+  port: swcorep8
+
+swcoreif9:
+  name: Interface 9
+  port: swcorep9
+
+swcoreif10:
+  name: Interface 10
+  port: swcorep10
+
+swcoreif11:
+  name: Interface 11
+  port: swcorep11
+
+swcoreif12:
+  name: Interface 12
+  port: swcorep12
+
+swcoreif13:
+  name: Interface 13
+  port: swcorep13
+
+swcoreif14:
+  name: Interface 14
+  port: swcorep14
+
+swcoreif15:
+  name: Interface 15
+  port: swcorep15
+
+swcoreif16:
+  name: Interface 16
+  port: swcorep16
+
+swcoreif17:
+  name: Interface 17
+  port: swcorep17
+
+swcoreif18:
+  name: Interface 18
+  port: swcorep18
+
+swcoreif19:
+  name: Interface 19
+  port: swcorep19
+
+swcoreif20:
+  name: Interface 20
+  port: swcorep20
+
+swcoreif21:
+  name: Interface 21
+  port: swcorep21
+
+swcoreif22:
+  name: Interface 22
+  port: swcorep22
+
+swcoreif23:
+  name: Interface 23
+  port: swcorep23
+
+swcoreif24:
+  name: Interface 24
+  port: swcorep24
+
+swcoreif25:
+  name: Interface 25
+  port: swcorep25
+
+swcoreif26:
+  name: Interface 26
+  port: swcorep26

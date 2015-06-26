@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+microserver:
+  name: HP Microserver g7
+  devicetype: server
+  asset: testasset1
+  location_id: 4
+
+paultdesk:
+  name: My Desktop
+  devicetype: desktop
+  asset: testasset2
+  location_id: 2
+
+paulsmacbook:
+  name: Paul's Macbook Pro
+  devicetype: laptop
+  asset: testasset3
+  location_id: 2
+
+vega:
+  name: vega
+  devicetype: server
+  asset: testasset4
+  location_id: 3
+
+hp1810-24g:
+  name: sw-core
+  devicetype: switch
+  asset: testasset5
+  location_id: 4

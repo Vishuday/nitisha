@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+cat5:
+  name: CAT5
+  conn1: rj45
+  conn2: rj45
+
+cat6:
+  name: CAT6
+  conn1: rj45
+  conn2: rj45

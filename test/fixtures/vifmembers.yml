@@ -1,0 +1,44 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+vifmember1:
+  virtualinterface: microbond0
+  interface: p1p1
+
+vifmember2:
+  virtualinterface: microbond0
+  interface: p1p2
+
+# 4 interface trunk to my office switch
+swcoretrk1vif1:
+  virtualinterface: coretrk1
+  interface: swcoreif21
+
+swcoretrk1vif2:
+  virtualinterface: coretrk1
+  interface: swcoreif22
+
+swcoretrk1vif3:
+  virtualinterface: coretrk1
+  interface: swcoreif23
+
+swcoretrk1vif4:
+  virtualinterface: coretrk1
+  interface: swcoreif24
+
+# 2 interface trunk to microserver
+swcoretrk2vif1:
+  virtualinterface: coretrk2
+  interface: swcoreif19
+
+swcoretrk2vif2:
+  virtualinterface: coretrk2
+  interface: swcoreif20
+
+# 2 interface trunk to 8 port POE switch
+swcoretrk3vif1:
+  virtualinterface: coretrk2
+  interface: swcoreif17
+
+swcoretrk3vif2:
+  virtualinterface: coretrk2
+  interface: swcoreif18

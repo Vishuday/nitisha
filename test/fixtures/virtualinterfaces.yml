@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+microbond0:
+  name: bond0
+
+coretrk1:
+  name: TRK1
+
+coretrk2:
+  name: TRK2
+
+coretrk3:
+  name: TRK3

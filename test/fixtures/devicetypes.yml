@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+server:
+  name: server
+
+laptop:
+  name: laptop
+
+desktop:
+  name: desktop
+
+switch:
+  name: switch
