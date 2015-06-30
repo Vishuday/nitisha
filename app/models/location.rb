@@ -1,6 +1,6 @@
 # Represents a location like a data center or rack, can be nested
 class Location < ActiveRecord::Base
-  validates :name, uniqueness: true
+  validates :name, uniqueness: true, presence: true
   validate :parent_can_be_nil_or_present
   belongs_to :contact
   belongs_to :parent, class_name: 'Location'

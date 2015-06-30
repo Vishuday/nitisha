@@ -13,9 +13,12 @@ class Connection < ActiveRecord::Base
   belongs_to :inverse, class_name: 'Connection', foreign_key: 'inverse_id'
 
   def connection_is_valid
-    return unless porta == portb
-    errors.add(:porta, 'Ports must be different')
-    errors.add(:portb, 'Ports must be different')
+    if porta == portb
+      errors.add(:porta, 'Ports must be different')
+      errors.add(:portb, 'Ports must be different')
+    end
+    errors.add(:porta, :blank) if porta.blank?
+    errors.add(:portb, :blank) if portb.blank?
   end
 
   # Delete the other half of this connection if we are deleting this one
@@ -38,16 +41,17 @@ class Connection < ActiveRecord::Base
 
   # If an inverse needs creating do it here
   def create_inverse
-    # If this is new we will have a porta & portb but no inverse
-    return unless !porta.blank? && !portb.blank? && inverse.blank?
+    # If this is new inverse will be blank
+    return unless inverse_id.blank?
 
     # Create an inverse connection object
     inv = Connection.create(cabletype: cabletype,
                             porta: portb,
                             portb: porta,
-                            inverse: self)
+                            inverse_id: id)
+    inv.save
     # rubocop:disable UselessAssignment
-    inverse = inv
+    self.inverse_id = inv.id
     # rubocop:enable all
     save
   end

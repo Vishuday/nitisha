@@ -2,7 +2,7 @@
 class Cabletype < ActiveRecord::Base
   validates :conn1, presence: true
   validates :conn2, presence: true
-  validates :name, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 
   belongs_to :conn1, class_name: 'Connectortype'
   belongs_to :conn2, class_name: 'Connectortype'

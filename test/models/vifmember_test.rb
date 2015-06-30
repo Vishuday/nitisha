@@ -1,7 +1,7 @@
 require 'test_helper'
 
+# Unit tests for vifmember model
 class VifmemberTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  # tests go here
+  # there are none because its just a relation table
 end
