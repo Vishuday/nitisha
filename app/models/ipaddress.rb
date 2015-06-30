@@ -6,6 +6,7 @@ class Ipaddress < ActiveRecord::Base
   validates :address, presence: true,
                       uniqueness: true
   validate :ipv4_or_ipv6_valid
+  validate :ip_within_parent
   validate :ip_within_range
   validate :interface_or_virtualinterface
   belongs_to :parent, class_name: 'Iprange'
@@ -15,16 +16,16 @@ class Ipaddress < ActiveRecord::Base
   # rubocop:disable Metrics/MethodLength
   # must provide either a physical or a virtual interface not both
   def interface_or_virtualinterface
-    if interface.defined? && virtualinterface.defined?
+    if !interface.blank? && !virtualinterface.blank?
       errors.add(:base, 'Only specify Interface or Virtualinterface')
     elsif interface.blank? && virtualinterface.blank?
       errors.add(:base, 'Specify either Interface or VirtualInterface')
     end
-    if interface.defined?
-      errors.add(:interface, :invalid) unless Interface.exists?(interface)
-    elsif virtualinterface.defined?
+    if !interface.nil?
+      errors.add(:interface, :invalid) unless Interface.exists?(interface.id)
+    elsif !virtualinterface.nil?
       errors.add(:virtualinterface,
-                 :invalid) unless VirtualInterface.exists?(virtualinterface)
+                 :invalid) unless Virtualinterface.exists?(virtualinterface.id)
     end
   end
   # rubocop:enable all
@@ -40,19 +41,38 @@ class Ipaddress < ActiveRecord::Base
     end
   end
 
+  def ip_within_parent
+    begin
+      parent = Iprange.find(parent_id)
+      errors.add(:address, 'Is not within parent range') unless
+        IPAddr.new("#{parent.address}/#{parent.prefix}").include? address
+    rescue ActiveRecord::RecordNotFound
+      errors.add(:address, 'Parent specified does not exist')
+    rescue IPAddr::InvalidAddressError
+      return # This is handled elsewhere
+    end
+  end
+
   def ip_within_range
     # Get all the ranges starting at smallest and working up
-    Iprange.order('prefix DESC').each do |iprange|
-      range = IPAddr.new("#{iprange.address}/#{iprange.prefix}")
-      if range.include?(IPAddr.new("#{address}/32"))
-        if parent_id == iprange.parent_id
-          break
-        else
-          errors.add(:address, "#{address} falls within " \
-                               "#{iprange.address}/#{iprange.prefix} " \
-                               "but parent is not #{iprange.parent_id}")
+    begin
+      Iprange.order('prefix DESC').each do |iprange|
+        range = IPAddr.new("#{iprange.address}/#{iprange.prefix}")
+        if range.include?(IPAddr.new(address))
+          if parent_id == iprange.id
+            return nil
+          else
+            errors.add(:address, "#{address} falls within " \
+                                 "#{iprange.address}/#{iprange.prefix} " \
+                                 "but parent is not #{iprange.id}")
+          end
         end
       end
+    rescue IPAddr::InvalidAddressError # This is handled by ipv4_or_ipv6_valid
+      return                           # but needs to be caught here too
     end
+    # If we haven't found a matching parent range by this point then one
+    # does not exist
+    errors.add(:address, "Address #{address} does not fall within any range")
   end
 end

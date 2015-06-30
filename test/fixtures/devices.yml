@@ -25,7 +25,7 @@ vega:
   location_id: 3
 
 hp1810-24g:
-  name: sw-core
+  name: sw-core-1810-24g
   devicetype: switch
   asset: testasset5
   location_id: 4
