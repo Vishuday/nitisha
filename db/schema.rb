@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150623183346) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "name"
+    t.string   "identifier"
     t.text     "description"
     t.integer  "devicetype_id"
     t.integer  "asset_id"

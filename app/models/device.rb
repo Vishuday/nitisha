@@ -2,6 +2,7 @@
 class Device < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :devicetype, presence: true
+  validates :identifier, presence: true
   validates :asset, presence: true
   validates :location, presence: true
   belongs_to :devicetype

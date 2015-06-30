@@ -3,29 +3,34 @@
 microserver:
   name: HP Microserver g7
   devicetype: server
+  identifier: 790c37fd-c951-4e6a-86c9-c79fccbf5a1e
   asset: testasset1
   location_id: 4
 
 paultdesk:
   name: My Desktop
   devicetype: desktop
+  identifier: windowsdesktop
   asset: testasset2
   location_id: 2
 
 paulsmacbook:
   name: Paul's Macbook Pro
   devicetype: laptop
+  identifier: paulsmacbook
   asset: testasset3
   location_id: 2
 
 vega:
   name: vega
   devicetype: server
+  identifier: 1c246e32-c84a-44a6-8a61-e1831d793499
   asset: testasset4
   location_id: 3
 
 hp1810-24g:
   name: sw-core-1810-24g
+  identifier: "mac 88:51:fb:ba:2d:e0"
   devicetype: switch
   asset: testasset5
   location_id: 4
