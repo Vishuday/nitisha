@@ -22,7 +22,7 @@ This could however be added as a consumer of Jarvis' REST API.
 Jarvis is a pure REST API each object is represented through the usual GET/POST/PUT/DELETE methods.
 
 ## Basic data structure
-<img src="doc/models_brief.svg" width="600"/>
+<img src="https://raw.githubusercontent.com/Afterglow/jarvis/master/doc/models_brief.svg" width="600" />
 
 The core of the data model is the `device`. This is a switch, or a server or
 some other piece of equipment.
